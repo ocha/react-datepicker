@@ -111,6 +111,10 @@
       .react-datepicker__navigation--years-upcoming:hover {
         border-bottom-color: #b3b3b3; }
 
+.react-datepicker__month-container {
+  display: inline;
+  float: left; }
+
 .react-datepicker__month {
   margin: 0.4rem;
   text-align: center; }
@@ -191,6 +195,9 @@
   border: 1px solid #aeaeae; }
   .react-datepicker__year-dropdown:hover {
     cursor: pointer; }
+  .react-datepicker__year-dropdown--scrollable {
+    height: 150px;
+    overflow-y: scroll; }
 
 .react-datepicker__year-option {
   line-height: 20px;

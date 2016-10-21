@@ -65,6 +65,9 @@ var DatePicker = React.createClass({
     tetherConstraints: React.PropTypes.array,
     title: React.PropTypes.string,
     todayButton: React.PropTypes.string,
+    renderElementBefore: React.PropTypes.node,
+    renderElementAfter: React.PropTypes.node,
+    customClassName: React.PropTypes.string,
     utcOffset: React.PropTypes.number
   },
 
@@ -222,6 +225,9 @@ var DatePicker = React.createClass({
         utcOffset={this.props.utcOffset}
         outsideClickIgnoreClass={outsideClickIgnoreClass}
         fixedHeight={this.props.fixedHeight}
+        renderElementBefore={this.props.renderElementBefore}
+        renderElementAfter={this.props.renderElementAfter}
+        customClassName={this.props.customClassName}
         monthsShown={this.props.monthsShown}
         onDropdownFocus={this.handleDropdownFocus}/>
   },
