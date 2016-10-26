@@ -68,7 +68,7 @@ var DatePicker = React.createClass({
     renderElementBefore: React.PropTypes.node,
     renderElementAfter: React.PropTypes.node,
     customClassName: React.PropTypes.string,
-    disableArrowKeys: React.PropTypes.boolean,
+    disableArrowKeys: React.PropTypes.bool,
     utcOffset: React.PropTypes.number
   },
 

@@ -37333,7 +37333,7 @@
 	    renderElementBefore: _react2.default.PropTypes.node,
 	    renderElementAfter: _react2.default.PropTypes.node,
 	    customClassName: _react2.default.PropTypes.string,
-	    disableArrowKeys: _react2.default.PropTypes.boolean,
+	    disableArrowKeys: _react2.default.PropTypes.bool,
 	    utcOffset: _react2.default.PropTypes.number
 	  },
 
