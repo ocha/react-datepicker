@@ -3,11 +3,11 @@ import DatePicker from 'react-datepicker'
 import moment from 'moment'
 
 export default React.createClass({
-  displayName: 'ExcludeDates',
+  displayName: 'Default',
 
   getInitialState () {
     return {
-      startDate: null
+      startDate: moment()
     }
   },
 
@@ -24,16 +24,14 @@ export default React.createClass({
           {'<DatePicker'}<br />
               {'selected={this.state.startDate}'}<br />
               {'onChange={this.handleChange}'}<br />
-              <strong>{'excludeDates={[moment(), moment().subtract(1, "days")]}'}</strong><br />
-              {'placeholderText="Select a date other than today or yesterday" />'}
+              {'showWeekNumbers />'}
         </code>
       </pre>
       <div className="column">
         <DatePicker
             selected={this.state.startDate}
             onChange={this.handleChange}
-            excludeDates={[moment(), moment().subtract(1, 'days')]}
-            placeholderText="Select a date other than today or yesterday" />
+            showWeekNumbers />
       </div>
     </div>
   }

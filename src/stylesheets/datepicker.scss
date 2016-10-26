@@ -68,6 +68,7 @@
   top: 10px;
   width: 0;
   border: $navigation-size solid transparent;
+  z-index: 1;
 
   &--previous {
     left: 10px;
@@ -122,6 +123,15 @@
 .react-datepicker__month {
   margin: $datepicker__margin;
   text-align: center;
+}
+
+.react-datepicker__week-number {
+  color: $muted-color;
+  display: inline-block;
+  width: $item-size;
+  line-height: $item-size;
+  text-align: center;
+  margin: $day-margin;
 }
 
 .react-datepicker__day-name,
