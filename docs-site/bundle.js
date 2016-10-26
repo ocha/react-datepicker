@@ -20495,7 +20495,7 @@
 
 	var _example_components2 = _interopRequireDefault(_example_components);
 
-	var _hero_example = __webpack_require__(611);
+	var _hero_example = __webpack_require__(613);
 
 	var _hero_example2 = _interopRequireDefault(_hero_example);
 
@@ -20629,113 +20629,117 @@
 
 	var _default2 = _interopRequireDefault(_default);
 
-	var _code_example_component = __webpack_require__(583);
+	var _code_example_component = __webpack_require__(584);
 
 	var _code_example_component2 = _interopRequireDefault(_code_example_component);
 
-	var _custom_date_format = __webpack_require__(584);
+	var _custom_date_format = __webpack_require__(585);
 
 	var _custom_date_format2 = _interopRequireDefault(_custom_date_format);
 
-	var _custom_class_name = __webpack_require__(585);
+	var _custom_class_name = __webpack_require__(586);
 
 	var _custom_class_name2 = _interopRequireDefault(_custom_class_name);
 
-	var _placeholder_text = __webpack_require__(586);
+	var _placeholder_text = __webpack_require__(587);
 
 	var _placeholder_text2 = _interopRequireDefault(_placeholder_text);
 
-	var _specific_date_range = __webpack_require__(587);
+	var _specific_date_range = __webpack_require__(588);
 
 	var _specific_date_range2 = _interopRequireDefault(_specific_date_range);
 
-	var _locale = __webpack_require__(588);
+	var _locale = __webpack_require__(589);
 
 	var _locale2 = _interopRequireDefault(_locale);
 
-	var _exclude_dates = __webpack_require__(589);
+	var _exclude_dates = __webpack_require__(590);
 
 	var _exclude_dates2 = _interopRequireDefault(_exclude_dates);
 
-	var _highlight_dates = __webpack_require__(590);
+	var _highlight_dates = __webpack_require__(591);
 
 	var _highlight_dates2 = _interopRequireDefault(_highlight_dates);
 
-	var _include_dates = __webpack_require__(591);
+	var _include_dates = __webpack_require__(592);
 
 	var _include_dates2 = _interopRequireDefault(_include_dates);
 
-	var _filter_dates = __webpack_require__(592);
+	var _filter_dates = __webpack_require__(593);
 
 	var _filter_dates2 = _interopRequireDefault(_filter_dates);
 
-	var _disabled = __webpack_require__(593);
+	var _disabled = __webpack_require__(594);
 
 	var _disabled2 = _interopRequireDefault(_disabled);
 
-	var _clear_input = __webpack_require__(594);
+	var _clear_input = __webpack_require__(595);
 
 	var _clear_input2 = _interopRequireDefault(_clear_input);
 
-	var _on_blur_callbacks = __webpack_require__(595);
+	var _on_blur_callbacks = __webpack_require__(596);
 
 	var _on_blur_callbacks2 = _interopRequireDefault(_on_blur_callbacks);
 
-	var _placement = __webpack_require__(596);
+	var _placement = __webpack_require__(597);
 
 	var _placement2 = _interopRequireDefault(_placement);
 
-	var _date_range = __webpack_require__(597);
+	var _date_range = __webpack_require__(598);
 
 	var _date_range2 = _interopRequireDefault(_date_range);
 
-	var _tab_index = __webpack_require__(598);
+	var _tab_index = __webpack_require__(599);
 
 	var _tab_index2 = _interopRequireDefault(_tab_index);
 
-	var _year_dropdown = __webpack_require__(599);
+	var _year_dropdown = __webpack_require__(600);
 
 	var _year_dropdown2 = _interopRequireDefault(_year_dropdown);
 
-	var _year_select_dropdown = __webpack_require__(600);
+	var _year_select_dropdown = __webpack_require__(601);
 
 	var _year_select_dropdown2 = _interopRequireDefault(_year_select_dropdown);
 
-	var _today = __webpack_require__(601);
+	var _today = __webpack_require__(602);
 
 	var _today2 = _interopRequireDefault(_today);
 
-	var _timezone_date = __webpack_require__(602);
+	var _timezone_date = __webpack_require__(603);
 
 	var _timezone_date2 = _interopRequireDefault(_timezone_date);
 
-	var _inline = __webpack_require__(603);
+	var _inline = __webpack_require__(604);
 
 	var _inline2 = _interopRequireDefault(_inline);
 
-	var _open_to_date = __webpack_require__(604);
+	var _open_to_date = __webpack_require__(605);
 
 	var _open_to_date2 = _interopRequireDefault(_open_to_date);
 
-	var _fixed_calendar = __webpack_require__(605);
+	var _fixed_calendar = __webpack_require__(606);
 
 	var _fixed_calendar2 = _interopRequireDefault(_fixed_calendar);
 
-	var _custom_input = __webpack_require__(606);
+	var _week_numbers = __webpack_require__(607);
+
+	var _week_numbers2 = _interopRequireDefault(_week_numbers);
+
+	var _custom_input = __webpack_require__(608);
 
 	var _custom_input2 = _interopRequireDefault(_custom_input);
 
-	var _multi_month = __webpack_require__(607);
+	var _multi_month = __webpack_require__(609);
 
 	var _multi_month2 = _interopRequireDefault(_multi_month);
 
-	var _multi_month_drp = __webpack_require__(608);
+	var _multi_month_drp = __webpack_require__(610);
 
 	var _multi_month_drp2 = _interopRequireDefault(_multi_month_drp);
 
-	__webpack_require__(609);
+	__webpack_require__(611);
 
-	__webpack_require__(610);
+	__webpack_require__(612);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20816,6 +20820,9 @@
 	  }, {
 	    title: 'Fixed height of Calendar',
 	    component: _react2.default.createElement(_fixed_calendar2.default, null)
+	  }, {
+	    title: 'Display Week Numbers',
+	    component: _react2.default.createElement(_week_numbers2.default, null)
 	  }, {
 	    title: 'Custom input',
 	    component: _react2.default.createElement(_custom_input2.default, null)
@@ -37215,13 +37222,11 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange} />"
+	          'onChange={this.handleChange} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -37253,11 +37258,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _defer = __webpack_require__(571);
+	var _defer = __webpack_require__(572);
 
 	var _defer2 = _interopRequireDefault(_defer);
 
-	var _tether_component = __webpack_require__(581);
+	var _tether_component = __webpack_require__(582);
 
 	var _tether_component2 = _interopRequireDefault(_tether_component);
 
@@ -37324,6 +37329,7 @@
 	    selectsEnd: _react2.default.PropTypes.bool,
 	    selectsStart: _react2.default.PropTypes.bool,
 	    showMonthDropdown: _react2.default.PropTypes.bool,
+	    showWeekNumbers: _react2.default.PropTypes.bool,
 	    showYearDropdown: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
 	    tabIndex: _react2.default.PropTypes.number,
@@ -37474,6 +37480,7 @@
 	      includeDates: this.props.includeDates,
 	      peekNextMonth: this.props.peekNextMonth,
 	      showMonthDropdown: this.props.showMonthDropdown,
+	      showWeekNumbers: this.props.showWeekNumbers,
 	      showYearDropdown: this.props.showYearDropdown,
 	      scrollableYearDropdown: this.props.scrollableYearDropdown,
 	      todayButton: this.props.todayButton,
@@ -37532,7 +37539,7 @@
 	      return _react2.default.createElement(
 	        _tether_component2.default,
 	        {
-	          classPrefix: "react-datepicker__tether",
+	          classPrefix: 'react-datepicker__tether',
 	          attachment: this.props.popoverAttachment,
 	          targetAttachment: this.props.popoverTargetAttachment,
 	          targetOffset: this.props.popoverTargetOffset,
@@ -37644,19 +37651,18 @@
 	    this.refs.input.focus();
 	  },
 	  render: function render() {
-	    var _props = this.props;
-	    var customInput = _props.customInput;
-	    var date = _props.date;
-	    var locale = _props.locale;
-	    var minDate = _props.minDate;
-	    var maxDate = _props.maxDate;
-	    var excludeDates = _props.excludeDates;
-	    var includeDates = _props.includeDates;
-	    var filterDate = _props.filterDate;
-	    var dateFormat = _props.dateFormat;
-	    var onChangeDate = _props.onChangeDate;
-
-	    var rest = _objectWithoutProperties(_props, ['customInput', 'date', 'locale', 'minDate', 'maxDate', 'excludeDates', 'includeDates', 'filterDate', 'dateFormat', 'onChangeDate']); // eslint-disable-line no-unused-vars
+	    var _props = this.props,
+	        customInput = _props.customInput,
+	        date = _props.date,
+	        locale = _props.locale,
+	        minDate = _props.minDate,
+	        maxDate = _props.maxDate,
+	        excludeDates = _props.excludeDates,
+	        includeDates = _props.includeDates,
+	        filterDate = _props.filterDate,
+	        dateFormat = _props.dateFormat,
+	        onChangeDate = _props.onChangeDate,
+	        rest = _objectWithoutProperties(_props, ['customInput', 'date', 'locale', 'minDate', 'maxDate', 'excludeDates', 'includeDates', 'filterDate', 'dateFormat', 'onChangeDate']); // eslint-disable-line no-unused-vars
 
 	    if (customInput) {
 	      return _react2.default.cloneElement(customInput, _extends({}, rest, {
@@ -37684,7 +37690,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {//! moment.js
-	//! version : 2.15.1
+	//! version : 2.15.2
 	//! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 	//! license : MIT
 	//! momentjs.com
@@ -38515,7 +38521,7 @@
 
 	    // LOCALES
 
-	    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?/;
+	    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
 	    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
 	    function localeMonths (m, format) {
 	        if (!m) {
@@ -41880,7 +41886,7 @@
 	    // Side effect imports
 
 
-	    utils_hooks__hooks.version = '2.15.1';
+	    utils_hooks__hooks.version = '2.15.2';
 
 	    setHookCallback(local__createLocal);
 
@@ -46878,7 +46884,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
-	//! locale : Japanese [jv]
+	//! locale : Javanese [jv]
 	//! author : Rony Lantip : https://github.com/lantip
 	//! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
@@ -47643,7 +47649,7 @@
 	        months : {
 	            format: 'sausio_vasario_kovo_balandžio_gegužės_birželio_liepos_rugpjūčio_rugsėjo_spalio_lapkričio_gruodžio'.split('_'),
 	            standalone: 'sausis_vasaris_kovas_balandis_gegužė_birželis_liepa_rugpjūtis_rugsėjis_spalis_lapkritis_gruodis'.split('_'),
-	            isFormat: /D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?|MMMM?(\[[^\[\]]*\]|\s+)+D[oD]?/
+	            isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/
 	        },
 	        monthsShort : 'sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd'.split('_'),
 	        weekdays : {
@@ -52130,13 +52136,12 @@
 	}
 
 	function isDayDisabled(day) {
-	  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	  var minDate = _ref.minDate;
-	  var maxDate = _ref.maxDate;
-	  var excludeDates = _ref.excludeDates;
-	  var includeDates = _ref.includeDates;
-	  var filterDate = _ref.filterDate;
+	  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+	      minDate = _ref.minDate,
+	      maxDate = _ref.maxDate,
+	      excludeDates = _ref.excludeDates,
+	      includeDates = _ref.includeDates,
+	      filterDate = _ref.filterDate;
 
 	  return minDate && day.isBefore(minDate, 'day') || maxDate && day.isAfter(maxDate, 'day') || excludeDates && excludeDates.some(function (excludeDate) {
 	    return isSameDay(day, excludeDate);
@@ -52146,10 +52151,9 @@
 	}
 
 	function allDaysDisabledBefore(day, unit) {
-	  var _ref2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	  var minDate = _ref2.minDate;
-	  var includeDates = _ref2.includeDates;
+	  var _ref2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {},
+	      minDate = _ref2.minDate,
+	      includeDates = _ref2.includeDates;
 
 	  var dateBefore = day.clone().subtract(1, unit);
 	  return minDate && dateBefore.isBefore(minDate, unit) || includeDates && includeDates.every(function (includeDate) {
@@ -52158,10 +52162,9 @@
 	}
 
 	function allDaysDisabledAfter(day, unit) {
-	  var _ref3 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	  var maxDate = _ref3.maxDate;
-	  var includeDates = _ref3.includeDates;
+	  var _ref3 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {},
+	      maxDate = _ref3.maxDate,
+	      includeDates = _ref3.includeDates;
 
 	  var dateAfter = day.clone().add(1, unit);
 	  return maxDate && dateAfter.isAfter(maxDate, unit) || includeDates && includeDates.every(function (includeDate) {
@@ -52170,8 +52173,8 @@
 	}
 
 	function getEffectiveMinDate(_ref4) {
-	  var minDate = _ref4.minDate;
-	  var includeDates = _ref4.includeDates;
+	  var minDate = _ref4.minDate,
+	      includeDates = _ref4.includeDates;
 
 	  if (includeDates && minDate) {
 	    return _moment2.default.min(includeDates.filter(function (includeDate) {
@@ -52185,8 +52188,8 @@
 	}
 
 	function getEffectiveMaxDate(_ref5) {
-	  var maxDate = _ref5.maxDate;
-	  var includeDates = _ref5.includeDates;
+	  var maxDate = _ref5.maxDate,
+	      includeDates = _ref5.includeDates;
 
 	  if (includeDates && maxDate) {
 	    return _moment2.default.max(includeDates.filter(function (includeDate) {
@@ -52276,6 +52279,7 @@
 	    selectsEnd: _react2.default.PropTypes.bool,
 	    selectsStart: _react2.default.PropTypes.bool,
 	    showMonthDropdown: _react2.default.PropTypes.bool,
+	    showWeekNumbers: _react2.default.PropTypes.bool,
 	    showYearDropdown: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
 	    todayButton: _react2.default.PropTypes.string,
@@ -52323,10 +52327,10 @@
 	    }
 	  },
 	  getDateInView: function getDateInView() {
-	    var _props = this.props;
-	    var selected = _props.selected;
-	    var openToDate = _props.openToDate;
-	    var utcOffset = _props.utcOffset;
+	    var _props = this.props,
+	        selected = _props.selected,
+	        openToDate = _props.openToDate,
+	        utcOffset = _props.utcOffset;
 
 	    var minDate = (0, _date_utils.getEffectiveMinDate)(this.props);
 	    var maxDate = (0, _date_utils.getEffectiveMaxDate)(this.props);
@@ -52385,14 +52389,22 @@
 	    var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.state.date;
 
 	    var startOfWeek = date.clone().startOf('week');
-	    return [0, 1, 2, 3, 4, 5, 6].map(function (offset) {
+	    var dayNames = [];
+	    if (this.props.showWeekNumbers) {
+	      dayNames.push(_react2.default.createElement(
+	        'div',
+	        { key: 'W', className: 'react-datepicker__day-name' },
+	        '#'
+	      ));
+	    }
+	    return dayNames.concat([0, 1, 2, 3, 4, 5, 6].map(function (offset) {
 	      var day = startOfWeek.clone().add(offset, 'days');
 	      return _react2.default.createElement(
 	        'div',
 	        { key: offset, className: 'react-datepicker__day-name' },
 	        day.localeData().weekdaysMin(day)
 	      );
-	    });
+	    }));
 	  },
 	  renderPreviousMonthButton: function renderPreviousMonthButton() {
 	    if ((0, _date_utils.allDaysDisabledBefore)(this.state.date, 'month', this.props)) {
@@ -52505,6 +52517,7 @@
 	          selected: this.props.selected,
 	          selectsStart: this.props.selectsStart,
 	          selectsEnd: this.props.selectsEnd,
+	          showWeekNumbers: this.props.showWeekNumbers,
 	          startDate: this.props.startDate,
 	          endDate: this.props.endDate,
 	          peekNextMonth: this.props.peekNextMonth,
@@ -56524,16 +56537,16 @@
 	    options.unshift(_react2.default.createElement(
 	      'div',
 	      { className: 'react-datepicker__year-option',
-	        ref: "upcoming",
-	        key: "upcoming",
+	        ref: 'upcoming',
+	        key: 'upcoming',
 	        onClick: this.incrementYears },
 	      _react2.default.createElement('a', { className: 'react-datepicker__navigation react-datepicker__navigation--years react-datepicker__navigation--years-upcoming' })
 	    ));
 	    options.push(_react2.default.createElement(
 	      'div',
 	      { className: 'react-datepicker__year-option',
-	        ref: "previous",
-	        key: "previous",
+	        ref: 'previous',
+	        key: 'previous',
 	        onClick: this.decrementYears },
 	      _react2.default.createElement('a', { className: 'react-datepicker__navigation react-datepicker__navigation--years react-datepicker__navigation--years-previous' })
 	    ));
@@ -57053,6 +57066,7 @@
 	    selectingDate: _react2.default.PropTypes.object,
 	    selectsEnd: _react2.default.PropTypes.bool,
 	    selectsStart: _react2.default.PropTypes.bool,
+	    showWeekNumbers: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
 	    utcOffset: _react2.default.PropTypes.number
 	  },
@@ -57101,6 +57115,7 @@
 	        selected: this.props.selected,
 	        selectsStart: this.props.selectsStart,
 	        selectsEnd: this.props.selectsEnd,
+	        showWeekNumber: this.props.showWeekNumbers,
 	        startDate: this.props.startDate,
 	        endDate: this.props.endDate,
 	        utcOffset: this.props.utcOffset }));
@@ -57127,10 +57142,10 @@
 	    return weeks;
 	  },
 	  getClassNames: function getClassNames() {
-	    var _props = this.props;
-	    var selectingDate = _props.selectingDate;
-	    var selectsStart = _props.selectsStart;
-	    var selectsEnd = _props.selectsEnd;
+	    var _props = this.props,
+	        selectingDate = _props.selectingDate,
+	        selectsStart = _props.selectsStart,
+	        selectsEnd = _props.selectsEnd;
 
 	    return (0, _classnames2.default)('react-datepicker__month', {
 	      'react-datepicker__month--selecting-range': selectingDate && (selectsStart || selectsEnd)
@@ -57161,6 +57176,10 @@
 
 	var _day2 = _interopRequireDefault(_day);
 
+	var _week_number = __webpack_require__(571);
+
+	var _week_number2 = _interopRequireDefault(_week_number);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Week = _react2.default.createClass({
@@ -57182,6 +57201,7 @@
 	    selectingDate: _react2.default.PropTypes.object,
 	    selectsEnd: _react2.default.PropTypes.bool,
 	    selectsStart: _react2.default.PropTypes.bool,
+	    showWeekNumber: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
 	    utcOffset: _react2.default.PropTypes.number
 	  },
@@ -57200,7 +57220,11 @@
 	    var _this = this;
 
 	    var startOfWeek = this.props.day.clone().startOf('week');
-	    return [0, 1, 2, 3, 4, 5, 6].map(function (offset) {
+	    var days = [];
+	    if (this.props.showWeekNumber) {
+	      days.push(_react2.default.createElement(_week_number2.default, { key: 'W', weekNumber: parseInt(startOfWeek.format('w'), 10) }));
+	    }
+	    return days.concat([0, 1, 2, 3, 4, 5, 6].map(function (offset) {
 	      var day = startOfWeek.clone().add(offset, 'days');
 	      return _react2.default.createElement(_day2.default, {
 	        key: offset,
@@ -57221,7 +57245,7 @@
 	        startDate: _this.props.startDate,
 	        endDate: _this.props.endDate,
 	        utcOffset: _this.props.utcOffset });
-	    });
+	    }));
 	  },
 	  render: function render() {
 	    return _react2.default.createElement(
@@ -57300,9 +57324,9 @@
 	    return (0, _date_utils.isDayDisabled)(this.props.day, this.props);
 	  },
 	  isHighlighted: function isHighlighted() {
-	    var _props = this.props;
-	    var day = _props.day;
-	    var highlightDates = _props.highlightDates;
+	    var _props = this.props,
+	        day = _props.day,
+	        highlightDates = _props.highlightDates;
 
 	    if (!highlightDates) return false;
 	    return highlightDates.some(function (testDay) {
@@ -57310,22 +57334,22 @@
 	    });
 	  },
 	  isInRange: function isInRange() {
-	    var _props2 = this.props;
-	    var day = _props2.day;
-	    var startDate = _props2.startDate;
-	    var endDate = _props2.endDate;
+	    var _props2 = this.props,
+	        day = _props2.day,
+	        startDate = _props2.startDate,
+	        endDate = _props2.endDate;
 
 	    if (!startDate || !endDate) return false;
 	    return (0, _date_utils.isDayInRange)(day, startDate, endDate);
 	  },
 	  isInSelectingRange: function isInSelectingRange() {
-	    var _props3 = this.props;
-	    var day = _props3.day;
-	    var selectsStart = _props3.selectsStart;
-	    var selectsEnd = _props3.selectsEnd;
-	    var selectingDate = _props3.selectingDate;
-	    var startDate = _props3.startDate;
-	    var endDate = _props3.endDate;
+	    var _props3 = this.props,
+	        day = _props3.day,
+	        selectsStart = _props3.selectsStart,
+	        selectsEnd = _props3.selectsEnd,
+	        selectingDate = _props3.selectingDate,
+	        startDate = _props3.startDate,
+	        endDate = _props3.endDate;
 
 
 	    if (!(selectsStart || selectsEnd) || !selectingDate || this.isDisabled()) {
@@ -57347,11 +57371,11 @@
 	      return false;
 	    }
 
-	    var _props4 = this.props;
-	    var day = _props4.day;
-	    var selectingDate = _props4.selectingDate;
-	    var startDate = _props4.startDate;
-	    var selectsStart = _props4.selectsStart;
+	    var _props4 = this.props,
+	        day = _props4.day,
+	        selectingDate = _props4.selectingDate,
+	        startDate = _props4.startDate,
+	        selectsStart = _props4.selectsStart;
 
 
 	    if (selectsStart) {
@@ -57365,11 +57389,11 @@
 	      return false;
 	    }
 
-	    var _props5 = this.props;
-	    var day = _props5.day;
-	    var selectingDate = _props5.selectingDate;
-	    var endDate = _props5.endDate;
-	    var selectsEnd = _props5.selectsEnd;
+	    var _props5 = this.props,
+	        day = _props5.day,
+	        selectingDate = _props5.selectingDate,
+	        endDate = _props5.endDate,
+	        selectsEnd = _props5.selectsEnd;
 
 
 	    if (selectsEnd) {
@@ -57379,19 +57403,19 @@
 	    }
 	  },
 	  isRangeStart: function isRangeStart() {
-	    var _props6 = this.props;
-	    var day = _props6.day;
-	    var startDate = _props6.startDate;
-	    var endDate = _props6.endDate;
+	    var _props6 = this.props,
+	        day = _props6.day,
+	        startDate = _props6.startDate,
+	        endDate = _props6.endDate;
 
 	    if (!startDate || !endDate) return false;
 	    return (0, _date_utils.isSameDay)(startDate, day);
 	  },
 	  isRangeEnd: function isRangeEnd() {
-	    var _props7 = this.props;
-	    var day = _props7.day;
-	    var startDate = _props7.startDate;
-	    var endDate = _props7.endDate;
+	    var _props7 = this.props,
+	        day = _props7.day,
+	        startDate = _props7.startDate,
+	        endDate = _props7.endDate;
 
 	    if (!startDate || !endDate) return false;
 	    return (0, _date_utils.isSameDay)(endDate, day);
@@ -57439,8 +57463,40 @@
 /* 571 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseDelay = __webpack_require__(572),
-	    baseRest = __webpack_require__(573);
+	'use strict';
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var WeekNumber = _react2.default.createClass({
+	  displayName: 'WeekNumber',
+
+	  propTypes: {
+	    weekNumber: _react2.default.PropTypes.number.isRequired
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      {
+	        className: 'react-datepicker__week-number',
+	        'aria-label': 'week-' + this.props.weekNumber },
+	      this.props.weekNumber
+	    );
+	  }
+	});
+
+	module.exports = WeekNumber;
+
+/***/ },
+/* 572 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var baseDelay = __webpack_require__(573),
+	    baseRest = __webpack_require__(574);
 
 	/**
 	 * Defers invoking the `func` until the current call stack has cleared. Any
@@ -57468,7 +57524,7 @@
 
 
 /***/ },
-/* 572 */
+/* 573 */
 /***/ function(module, exports) {
 
 	/** Error message constants. */
@@ -57495,12 +57551,12 @@
 
 
 /***/ },
-/* 573 */
+/* 574 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var identity = __webpack_require__(550),
-	    overRest = __webpack_require__(574),
-	    setToString = __webpack_require__(576);
+	    overRest = __webpack_require__(575),
+	    setToString = __webpack_require__(577);
 
 	/**
 	 * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -57518,10 +57574,10 @@
 
 
 /***/ },
-/* 574 */
+/* 575 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var apply = __webpack_require__(575);
+	var apply = __webpack_require__(576);
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeMax = Math.max;
@@ -57560,7 +57616,7 @@
 
 
 /***/ },
-/* 575 */
+/* 576 */
 /***/ function(module, exports) {
 
 	/**
@@ -57587,11 +57643,11 @@
 
 
 /***/ },
-/* 576 */
+/* 577 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseSetToString = __webpack_require__(577),
-	    shortOut = __webpack_require__(580);
+	var baseSetToString = __webpack_require__(578),
+	    shortOut = __webpack_require__(581);
 
 	/**
 	 * Sets the `toString` method of `func` to return `string`.
@@ -57607,11 +57663,11 @@
 
 
 /***/ },
-/* 577 */
+/* 578 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var constant = __webpack_require__(578),
-	    defineProperty = __webpack_require__(579),
+	var constant = __webpack_require__(579),
+	    defineProperty = __webpack_require__(580),
 	    identity = __webpack_require__(550);
 
 	/**
@@ -57635,7 +57691,7 @@
 
 
 /***/ },
-/* 578 */
+/* 579 */
 /***/ function(module, exports) {
 
 	/**
@@ -57667,7 +57723,7 @@
 
 
 /***/ },
-/* 579 */
+/* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var getNative = __webpack_require__(466);
@@ -57684,7 +57740,7 @@
 
 
 /***/ },
-/* 580 */
+/* 581 */
 /***/ function(module, exports) {
 
 	/** Used to detect hot functions by number of calls within a span of milliseconds. */
@@ -57727,7 +57783,7 @@
 
 
 /***/ },
-/* 581 */
+/* 582 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57742,7 +57798,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _tether = __webpack_require__(582);
+	var _tether = __webpack_require__(583);
 
 	var _tether2 = _interopRequireDefault(_tether);
 
@@ -57826,10 +57882,10 @@
 	  _update: function _update() {
 	    var _this = this;
 
-	    var _props = this.props;
-	    var children = _props.children;
-	    var renderElementTag = _props.renderElementTag;
-	    var renderElementTo = _props.renderElementTo;
+	    var _props = this.props,
+	        children = _props.children,
+	        renderElementTag = _props.renderElementTag,
+	        renderElementTo = _props.renderElementTo;
 
 	    var elementComponent = children[1];
 
@@ -57859,11 +57915,10 @@
 	    });
 	  },
 	  _updateTether: function _updateTether() {
-	    var _props2 = this.props;
-	    var renderElementTag = _props2.renderElementTag;
-	    var renderElementTo = _props2.renderElementTo;
-
-	    var options = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo']); // eslint-disable-line no-unused-vars
+	    var _props2 = this.props,
+	        renderElementTag = _props2.renderElementTag,
+	        renderElementTo = _props2.renderElementTo,
+	        options = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo']); // eslint-disable-line no-unused-vars
 
 
 	    var tetherOptions = _extends({
@@ -57900,7 +57955,7 @@
 	module.exports = TetherComponent;
 
 /***/ },
-/* 582 */
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.3.7 */
@@ -59713,7 +59768,7 @@
 
 
 /***/ },
-/* 583 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59752,7 +59807,7 @@
 	});
 
 /***/ },
-/* 584 */
+/* 585 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59798,20 +59853,17 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "dateFormat=\"YYYY/MM/DD\""
+	            'dateFormat="YYYY/MM/DD"'
 	          ),
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange} />"
+	          'onChange={this.handleChange} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -59827,7 +59879,7 @@
 	});
 
 /***/ },
-/* 585 */
+/* 586 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59873,17 +59925,14 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          ' ',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "className='red-border' />"
+	          'className="red-border" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -59899,7 +59948,7 @@
 	});
 
 /***/ },
-/* 586 */
+/* 587 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59931,7 +59980,7 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker placeholderText=\"Click to select a date\" />"
+	          '<DatePicker placeholderText="Click to select a date" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -59944,7 +59993,7 @@
 	});
 
 /***/ },
-/* 587 */
+/* 588 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59990,30 +60039,26 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "minDate={moment()}"
+	            'minDate={moment()}'
 	          ),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "maxDate={moment().add(5, 'days')}"
+	            'maxDate={moment().add(5, "days")}'
 	          ),
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "placeholderText=\"Select a date between today and 5 days in the future\" />"
+	          'placeholderText="Select a date between today and 5 days in the future" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60031,7 +60076,7 @@
 	});
 
 /***/ },
-/* 588 */
+/* 589 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60073,23 +60118,20 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "locale='en-gb'"
+	            'locale="en-gb"'
 	          ),
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "placeholderText='Weeks start on Monday' />"
+	          'placeholderText="Weeks start on Monday" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60106,7 +60148,7 @@
 	});
 
 /***/ },
-/* 589 */
+/* 590 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60152,23 +60194,20 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "excludeDates={[moment(), moment().subtract(1, 'days')]}"
+	            'excludeDates={[moment(), moment().subtract(1, "days")]}'
 	          ),
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "placeholderText=\"Select a date other than today or yesterday\" />"
+	          'placeholderText="Select a date other than today or yesterday" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60185,7 +60224,7 @@
 	});
 
 /***/ },
-/* 590 */
+/* 591 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60231,23 +60270,20 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "highlightDates={[moment().subtract(7, 'days'), moment().add(7, 'days')]}"
+	            'highlightDates={[moment().subtract(7, "days"), moment().add(7, "days")]}'
 	          ),
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "placeholderText=\"This highlights a week ago and a week from today\" />"
+	          'placeholderText="This highlights a week ago and a week from today" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60264,7 +60300,7 @@
 	});
 
 /***/ },
-/* 591 */
+/* 592 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60310,23 +60346,20 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "includeDates={[moment(), moment().add(1, 'days')]}"
+	            'includeDates={[moment(), moment().add(1, "days")]}'
 	          ),
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "placeholderText=\"This only includes today and tomorrow\" />"
+	          'placeholderText="This only includes today and tomorrow" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60343,7 +60376,7 @@
 	});
 
 /***/ },
-/* 592 */
+/* 593 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60389,23 +60422,20 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.date}",
+	          'selected={this.state.date}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "filterDate={this.isWeekday}"
+	            'filterDate={this.isWeekday}'
 	          ),
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "placeholderText=\"Select a weekday\" />"
+	          'placeholderText="Select a weekday" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60422,7 +60452,7 @@
 	});
 
 /***/ },
-/* 593 */
+/* 594 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60464,23 +60494,20 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "disabled={true}"
+	            'disabled={true}'
 	          ),
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "placeholderText='This is disabled'",
+	          'placeholderText="This is disabled"',
 	          ' />'
 	        )
 	      ),
@@ -60498,7 +60525,7 @@
 	});
 
 /***/ },
-/* 594 */
+/* 595 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60544,19 +60571,15 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange }',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "isClearable={true}",
+	          'isClearable={true}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "placeholderText='I have been cleared!' />"
+	          'placeholderText="I have been cleared!" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60573,7 +60596,7 @@
 	});
 
 /***/ },
-/* 595 */
+/* 596 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60626,52 +60649,42 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'js' },
-	          "handleOnBlur: function (date) {",
+	          'handleOnBlur: function (date) {',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "if (date === null) {",
+	          'if (date === null) {',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 \xA0 \xA0 ',
-	          "console.log('selected date: %s', date);",
+	          'console.log("selected date: %s", date);',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "}",
+	          '}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "else {",
+	          'else {',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 \xA0 \xA0 ',
-	          "console.log('selected date: %s', date.format('DD/MM/YYYY'));",
+	          'console.log("selected date: %s", date.format("DD/MM/YYYY"));',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "}",
+	          '}',
 	          _react2.default.createElement('br', null),
-	          "};"
+	          '};'
 	        ),
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "key='example9'",
+	          'key="example9"',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            'strong',
 	            null,
-	            '\xA0 \xA0 ',
-	            "onBlur={this.handleOnBlur}"
+	            'onBlur={this.handleOnBlur}'
 	          ),
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "placeholderText=\"View blur callbacks in console\" />"
+	          'placeholderText="View blur callbacks in console" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60689,7 +60702,7 @@
 	});
 
 /***/ },
-/* 596 */
+/* 597 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60735,22 +60748,17 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "popoverAttachment='bottom center'",
+	          'popoverAttachment="bottom center"',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "popoverTargetAttachment='top center'",
+	          'popoverTargetAttachment="top center"',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "popoverTargetOffset='0px 0px' />"
+	          'popoverTargetOffset="0px 0px" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60768,7 +60776,7 @@
 	});
 
 /***/ },
-/* 597 */
+/* 598 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60788,8 +60796,8 @@
 	  },
 
 	  handleChange: function handleChange(_ref) {
-	    var startDate = _ref.startDate;
-	    var endDate = _ref.endDate;
+	    var startDate = _ref.startDate,
+	        endDate = _ref.endDate;
 
 	    startDate = startDate || this.state.startDate;
 	    endDate = endDate || this.state.endDate;
@@ -60821,37 +60829,29 @@
 	        React.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          React.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          React.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selectsStart",
-	          '\xA0 \xA0 ',
-	          "startDate={this.state.startDate}",
+	          'selectsStart',
+	          '\xA0 ',
+	          'startDate={this.state.startDate}',
 	          React.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "endDate={this.state.endDate}",
+	          'endDate={this.state.endDate}',
 	          React.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChangeStart} />",
+	          'onChange={this.handleChangeStart} />',
 	          React.createElement('br', null),
-	          "<DatePicker",
+	          '<DatePicker',
 	          React.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.endDate}",
+	          'selected={this.state.endDate}',
 	          React.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selectsEnd",
-	          '\xA0 \xA0 ',
-	          "startDate={this.state.startDate}",
+	          'selectsEnd',
+	          '\xA0 ',
+	          'startDate={this.state.startDate}',
 	          React.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "endDate={this.state.endDate}",
+	          'endDate={this.state.endDate}',
 	          React.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChangeEnd} />",
+	          'onChange={this.handleChangeEnd} />',
 	          React.createElement('br', null)
 	        )
 	      ),
@@ -60878,7 +60878,7 @@
 	module.exports = DateRange;
 
 /***/ },
-/* 598 */
+/* 599 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60924,16 +60924,13 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "tabIndex={1} />"
+	          'tabIndex={1} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -60943,87 +60940,6 @@
 	          selected: this.state.startDate,
 	          onChange: this.handleChange,
 	          tabIndex: 1 })
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 599 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDatepicker = __webpack_require__(335);
-
-	var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
-
-	var _moment = __webpack_require__(337);
-
-	var _moment2 = _interopRequireDefault(_moment);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'YearDropdown',
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      startDate: (0, _moment2.default)()
-	    };
-	  },
-	  handleChange: function handleChange(date) {
-	    this.setState({
-	      startDate: date
-	    });
-	  },
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'row' },
-	      _react2.default.createElement(
-	        'pre',
-	        { className: 'column example__code' },
-	        _react2.default.createElement(
-	          'code',
-	          { className: 'jsx' },
-	          "<DatePicker",
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
-	          ' ',
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "showYearDropdown",
-	          ' ',
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "dateFormatCalendar=\"MMMM\"",
-	          ' ',
-	          _react2.default.createElement('br', null),
-	          "scrollableYearDropdown />"
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'column' },
-	        _react2.default.createElement(_reactDatepicker2.default, {
-	          selected: this.state.startDate,
-	          onChange: this.handleChange,
-	          showYearDropdown: true,
-	          dateFormatCalendar: 'MMMM',
-	          scrollableYearDropdown: true })
 	      )
 	    );
 	  }
@@ -61076,29 +60992,101 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
+	          ' ',
+	          _react2.default.createElement('br', null),
+	          'showYearDropdown',
+	          ' ',
+	          _react2.default.createElement('br', null),
+	          'dateFormatCalendar="MMMM"',
+	          ' ',
+	          _react2.default.createElement('br', null),
+	          'scrollableYearDropdown />'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'column' },
+	        _react2.default.createElement(_reactDatepicker2.default, {
+	          selected: this.state.startDate,
+	          onChange: this.handleChange,
+	          showYearDropdown: true,
+	          dateFormatCalendar: 'MMMM',
+	          scrollableYearDropdown: true })
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 601 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDatepicker = __webpack_require__(335);
+
+	var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
+
+	var _moment = __webpack_require__(337);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'YearDropdown',
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      startDate: (0, _moment2.default)()
+	    };
+	  },
+	  handleChange: function handleChange(date) {
+	    this.setState({
+	      startDate: date
+	    });
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'row' },
+	      _react2.default.createElement(
+	        'pre',
+	        { className: 'column example__code' },
+	        _react2.default.createElement(
+	          'code',
+	          { className: 'jsx' },
+	          '<DatePicker',
+	          _react2.default.createElement('br', null),
+	          'selected={this.state.startDate}',
+	          _react2.default.createElement('br', null),
+	          'onChange={this.handleChange}',
+	          ' ',
+	          _react2.default.createElement('br', null),
+	          'peekNextMonth',
+	          ' ',
+	          _react2.default.createElement('br', null),
+	          'showMonthDropdown',
+	          ' ',
+	          _react2.default.createElement('br', null),
+	          'showYearDropdown',
 	          ' ',
 	          _react2.default.createElement('br', null),
 	          '\xA0 \xA0 ',
-	          "peekNextMonth",
-	          ' ',
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "showMonthDropdown",
-	          ' ',
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "showYearDropdown",
-	          ' ',
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "dropdownMode=\"select\" />"
+	          'dropdownMode="select" />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -61117,7 +61105,7 @@
 	});
 
 /***/ },
-/* 601 */
+/* 602 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61163,20 +61151,20 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          "todayButton={'Vandaag'}",
+	          'todayButton={"Vandaag"}',
 	          _react2.default.createElement('br', null),
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          "onChange={this.handleChange} />"
+	          'onChange={this.handleChange} />'
 	        )
 	      ),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'column' },
 	        _react2.default.createElement(_reactDatepicker2.default, {
-	          todayButton: "Vandaag",
+	          todayButton: 'Vandaag',
 	          selected: this.state.startDate,
 	          onChange: this.handleChange })
 	      )
@@ -61185,7 +61173,7 @@
 	});
 
 /***/ },
-/* 602 */
+/* 603 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61227,13 +61215,13 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          "utcOffset='1320'",
+	          'utcOffset=1320',
 	          _react2.default.createElement('br', null),
-	          "todayButton='Today'",
+	          'todayButton="Today"',
 	          _react2.default.createElement('br', null),
-	          "onChange={this.handleChange} />"
+	          'onChange={this.handleChange} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -61251,7 +61239,7 @@
 	});
 
 /***/ },
-/* 603 */
+/* 604 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61297,16 +61285,13 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "inline",
+	          'inline',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange} />"
+	          'onChange={this.handleChange} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -61322,7 +61307,7 @@
 	});
 
 /***/ },
-/* 604 */
+/* 605 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61368,15 +61353,13 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          "openToDate={moment('1993-09-28')}",
+	          'openToDate={moment("1993-09-28")}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange} />"
+	          'onChange={this.handleChange} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -61392,7 +61375,7 @@
 	});
 
 /***/ },
-/* 605 */
+/* 606 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61434,16 +61417,13 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "fixedHeight",
+	          'fixedHeight',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange} />"
+	          'onChange={this.handleChange} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -61459,7 +61439,75 @@
 	});
 
 /***/ },
-/* 606 */
+/* 607 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDatepicker = __webpack_require__(335);
+
+	var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
+
+	var _moment = __webpack_require__(337);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Default',
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      startDate: (0, _moment2.default)()
+	    };
+	  },
+	  handleChange: function handleChange(date) {
+	    this.setState({
+	      startDate: date
+	    });
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'row' },
+	      _react2.default.createElement(
+	        'pre',
+	        { className: 'column example__code' },
+	        _react2.default.createElement(
+	          'code',
+	          { className: 'jsx' },
+	          '<DatePicker',
+	          _react2.default.createElement('br', null),
+	          'selected={this.state.startDate}',
+	          _react2.default.createElement('br', null),
+	          'onChange={this.handleChange}',
+	          _react2.default.createElement('br', null),
+	          'showWeekNumbers />'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'column' },
+	        _react2.default.createElement(_reactDatepicker2.default, {
+	          selected: this.state.startDate,
+	          onChange: this.handleChange,
+	          showWeekNumbers: true })
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 608 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61525,68 +61573,53 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "var ExampleCustomInput = React.createClass({",
+	          'var ExampleCustomInput = React.createClass({',
 	          _react2.default.createElement('br', null),
-	          '\xA0 ',
-	          "displayName: 'ExampleCustomInput',",
-	          _react2.default.createElement('br', null),
-	          _react2.default.createElement('br', null),
-	          '\xA0 ',
-	          "propTypes: {",
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onClick: React.PropTypes.func,",
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "value: React.PropTypes.string",
-	          _react2.default.createElement('br', null),
-	          '\xA0 ',
-	          "},",
+	          'displayName: "ExampleCustomInput" ,',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
 	          '\xA0 ',
-	          "render () {",
+	          'propTypes: {',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "return (",
+	          'onClick: React.PropTypes.func,',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 \xA0 ',
-	          "<button",
+	          'value: React.PropTypes.string',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 \xA0 \xA0 ',
-	          "className=\"example-custom-input\"",
+	          '},',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 \xA0 \xA0 ',
-	          "onClick={this.props.onClick}>",
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 \xA0 \xA0 ',
-	          "{this.props.value}",
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 \xA0 ',
-	          "</button>",
-	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          ")",
 	          _react2.default.createElement('br', null),
 	          '\xA0 ',
-	          "}",
+	          'render () {',
 	          _react2.default.createElement('br', null),
-	          "})",
+	          'return (',
+	          _react2.default.createElement('br', null),
+	          '<button',
+	          _react2.default.createElement('br', null),
+	          'className="example-custom-input"',
+	          _react2.default.createElement('br', null),
+	          'onClick={this.props.onClick}>',
+	          _react2.default.createElement('br', null),
+	          '{this.props.value}',
+	          _react2.default.createElement('br', null),
+	          '</button>',
+	          _react2.default.createElement('br', null),
+	          ')',
+	          _react2.default.createElement('br', null),
+	          '}',
+	          _react2.default.createElement('br', null),
+	          '})',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
-	          "...",
+	          '...',
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "customInput={<ExampleCustomInput />}",
+	          'customInput={<ExampleCustomInput />}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          '\xA0 \xA0 ',
-	          "onChange={this.handleChange} />"
+	          'onChange={this.handleChange} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -61602,7 +61635,7 @@
 	});
 
 /***/ },
-/* 607 */
+/* 609 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61648,13 +61681,13 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
-	          "months={2} />"
+	          'months={2} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -61670,7 +61703,7 @@
 	});
 
 /***/ },
-/* 608 */
+/* 610 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61716,15 +61749,15 @@
 	        _react2.default.createElement(
 	          'code',
 	          { className: 'jsx' },
-	          "<DatePicker",
+	          '<DatePicker',
 	          _react2.default.createElement('br', null),
-	          "selected={this.state.startDate}",
+	          'selected={this.state.startDate}',
 	          _react2.default.createElement('br', null),
-	          "onChange={this.handleChange}",
+	          'onChange={this.handleChange}',
 	          _react2.default.createElement('br', null),
-	          "showYearDropdown",
+	          'showYearDropdown',
 	          _react2.default.createElement('br', null),
-	          "months={2} />"
+	          'months={2} />'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -61741,15 +61774,15 @@
 	});
 
 /***/ },
-/* 609 */
+/* 611 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 610 */
-609,
-/* 611 */
+/* 612 */
+611,
+/* 613 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

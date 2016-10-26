@@ -7,7 +7,7 @@
 		exports["DatePicker"] = factory(require("moment"), require("react"), require("react-onclickoutside"), require("react-dom"));
 	else
 		root["DatePicker"] = factory(root["moment"], root["React"], root["OnClickOutside"], root["ReactDOM"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_123__, __WEBPACK_EXTERNAL_MODULE_143__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_123__, __WEBPACK_EXTERNAL_MODULE_144__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -68,11 +68,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _defer = __webpack_require__(132);
+	var _defer = __webpack_require__(133);
 
 	var _defer2 = _interopRequireDefault(_defer);
 
-	var _tether_component = __webpack_require__(142);
+	var _tether_component = __webpack_require__(143);
 
 	var _tether_component2 = _interopRequireDefault(_tether_component);
 
@@ -139,6 +139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    selectsEnd: _react2.default.PropTypes.bool,
 	    selectsStart: _react2.default.PropTypes.bool,
 	    showMonthDropdown: _react2.default.PropTypes.bool,
+	    showWeekNumbers: _react2.default.PropTypes.bool,
 	    showYearDropdown: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
 	    tabIndex: _react2.default.PropTypes.number,
@@ -289,6 +290,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      includeDates: this.props.includeDates,
 	      peekNextMonth: this.props.peekNextMonth,
 	      showMonthDropdown: this.props.showMonthDropdown,
+	      showWeekNumbers: this.props.showWeekNumbers,
 	      showYearDropdown: this.props.showYearDropdown,
 	      scrollableYearDropdown: this.props.scrollableYearDropdown,
 	      todayButton: this.props.todayButton,
@@ -347,7 +349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return _react2.default.createElement(
 	        _tether_component2.default,
 	        {
-	          classPrefix: "react-datepicker__tether",
+	          classPrefix: 'react-datepicker__tether',
 	          attachment: this.props.popoverAttachment,
 	          targetAttachment: this.props.popoverTargetAttachment,
 	          targetOffset: this.props.popoverTargetOffset,
@@ -459,19 +461,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.refs.input.focus();
 	  },
 	  render: function render() {
-	    var _props = this.props;
-	    var customInput = _props.customInput;
-	    var date = _props.date;
-	    var locale = _props.locale;
-	    var minDate = _props.minDate;
-	    var maxDate = _props.maxDate;
-	    var excludeDates = _props.excludeDates;
-	    var includeDates = _props.includeDates;
-	    var filterDate = _props.filterDate;
-	    var dateFormat = _props.dateFormat;
-	    var onChangeDate = _props.onChangeDate;
-
-	    var rest = _objectWithoutProperties(_props, ['customInput', 'date', 'locale', 'minDate', 'maxDate', 'excludeDates', 'includeDates', 'filterDate', 'dateFormat', 'onChangeDate']); // eslint-disable-line no-unused-vars
+	    var _props = this.props,
+	        customInput = _props.customInput,
+	        date = _props.date,
+	        locale = _props.locale,
+	        minDate = _props.minDate,
+	        maxDate = _props.maxDate,
+	        excludeDates = _props.excludeDates,
+	        includeDates = _props.includeDates,
+	        filterDate = _props.filterDate,
+	        dateFormat = _props.dateFormat,
+	        onChangeDate = _props.onChangeDate,
+	        rest = _objectWithoutProperties(_props, ['customInput', 'date', 'locale', 'minDate', 'maxDate', 'excludeDates', 'includeDates', 'filterDate', 'dateFormat', 'onChangeDate']); // eslint-disable-line no-unused-vars
 
 	    if (customInput) {
 	      return _react2.default.cloneElement(customInput, _extends({}, rest, {
@@ -544,13 +545,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function isDayDisabled(day) {
-	  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	  var minDate = _ref.minDate;
-	  var maxDate = _ref.maxDate;
-	  var excludeDates = _ref.excludeDates;
-	  var includeDates = _ref.includeDates;
-	  var filterDate = _ref.filterDate;
+	  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+	      minDate = _ref.minDate,
+	      maxDate = _ref.maxDate,
+	      excludeDates = _ref.excludeDates,
+	      includeDates = _ref.includeDates,
+	      filterDate = _ref.filterDate;
 
 	  return minDate && day.isBefore(minDate, 'day') || maxDate && day.isAfter(maxDate, 'day') || excludeDates && excludeDates.some(function (excludeDate) {
 	    return isSameDay(day, excludeDate);
@@ -560,10 +560,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function allDaysDisabledBefore(day, unit) {
-	  var _ref2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	  var minDate = _ref2.minDate;
-	  var includeDates = _ref2.includeDates;
+	  var _ref2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {},
+	      minDate = _ref2.minDate,
+	      includeDates = _ref2.includeDates;
 
 	  var dateBefore = day.clone().subtract(1, unit);
 	  return minDate && dateBefore.isBefore(minDate, unit) || includeDates && includeDates.every(function (includeDate) {
@@ -572,10 +571,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function allDaysDisabledAfter(day, unit) {
-	  var _ref3 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	  var maxDate = _ref3.maxDate;
-	  var includeDates = _ref3.includeDates;
+	  var _ref3 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {},
+	      maxDate = _ref3.maxDate,
+	      includeDates = _ref3.includeDates;
 
 	  var dateAfter = day.clone().add(1, unit);
 	  return maxDate && dateAfter.isAfter(maxDate, unit) || includeDates && includeDates.every(function (includeDate) {
@@ -584,8 +582,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function getEffectiveMinDate(_ref4) {
-	  var minDate = _ref4.minDate;
-	  var includeDates = _ref4.includeDates;
+	  var minDate = _ref4.minDate,
+	      includeDates = _ref4.includeDates;
 
 	  if (includeDates && minDate) {
 	    return _moment2.default.min(includeDates.filter(function (includeDate) {
@@ -599,8 +597,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function getEffectiveMaxDate(_ref5) {
-	  var maxDate = _ref5.maxDate;
-	  var includeDates = _ref5.includeDates;
+	  var maxDate = _ref5.maxDate,
+	      includeDates = _ref5.includeDates;
 
 	  if (includeDates && maxDate) {
 	    return _moment2.default.max(includeDates.filter(function (includeDate) {
@@ -690,6 +688,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    selectsEnd: _react2.default.PropTypes.bool,
 	    selectsStart: _react2.default.PropTypes.bool,
 	    showMonthDropdown: _react2.default.PropTypes.bool,
+	    showWeekNumbers: _react2.default.PropTypes.bool,
 	    showYearDropdown: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
 	    todayButton: _react2.default.PropTypes.string,
@@ -737,10 +736,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  getDateInView: function getDateInView() {
-	    var _props = this.props;
-	    var selected = _props.selected;
-	    var openToDate = _props.openToDate;
-	    var utcOffset = _props.utcOffset;
+	    var _props = this.props,
+	        selected = _props.selected,
+	        openToDate = _props.openToDate,
+	        utcOffset = _props.utcOffset;
 
 	    var minDate = (0, _date_utils.getEffectiveMinDate)(this.props);
 	    var maxDate = (0, _date_utils.getEffectiveMaxDate)(this.props);
@@ -799,14 +798,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.state.date;
 
 	    var startOfWeek = date.clone().startOf('week');
-	    return [0, 1, 2, 3, 4, 5, 6].map(function (offset) {
+	    var dayNames = [];
+	    if (this.props.showWeekNumbers) {
+	      dayNames.push(_react2.default.createElement(
+	        'div',
+	        { key: 'W', className: 'react-datepicker__day-name' },
+	        '#'
+	      ));
+	    }
+	    return dayNames.concat([0, 1, 2, 3, 4, 5, 6].map(function (offset) {
 	      var day = startOfWeek.clone().add(offset, 'days');
 	      return _react2.default.createElement(
 	        'div',
 	        { key: offset, className: 'react-datepicker__day-name' },
 	        day.localeData().weekdaysMin(day)
 	      );
-	    });
+	    }));
 	  },
 	  renderPreviousMonthButton: function renderPreviousMonthButton() {
 	    if ((0, _date_utils.allDaysDisabledBefore)(this.state.date, 'month', this.props)) {
@@ -919,6 +926,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          selected: this.props.selected,
 	          selectsStart: this.props.selectsStart,
 	          selectsEnd: this.props.selectsEnd,
+	          showWeekNumbers: this.props.showWeekNumbers,
 	          startDate: this.props.startDate,
 	          endDate: this.props.endDate,
 	          peekNextMonth: this.props.peekNextMonth,
@@ -4954,16 +4962,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    options.unshift(_react2.default.createElement(
 	      'div',
 	      { className: 'react-datepicker__year-option',
-	        ref: "upcoming",
-	        key: "upcoming",
+	        ref: 'upcoming',
+	        key: 'upcoming',
 	        onClick: this.incrementYears },
 	      _react2.default.createElement('a', { className: 'react-datepicker__navigation react-datepicker__navigation--years react-datepicker__navigation--years-upcoming' })
 	    ));
 	    options.push(_react2.default.createElement(
 	      'div',
 	      { className: 'react-datepicker__year-option',
-	        ref: "previous",
-	        key: "previous",
+	        ref: 'previous',
+	        key: 'previous',
 	        onClick: this.decrementYears },
 	      _react2.default.createElement('a', { className: 'react-datepicker__navigation react-datepicker__navigation--years react-datepicker__navigation--years-previous' })
 	    ));
@@ -5351,6 +5359,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    selectingDate: _react2.default.PropTypes.object,
 	    selectsEnd: _react2.default.PropTypes.bool,
 	    selectsStart: _react2.default.PropTypes.bool,
+	    showWeekNumbers: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
 	    utcOffset: _react2.default.PropTypes.number
 	  },
@@ -5399,6 +5408,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        selected: this.props.selected,
 	        selectsStart: this.props.selectsStart,
 	        selectsEnd: this.props.selectsEnd,
+	        showWeekNumber: this.props.showWeekNumbers,
 	        startDate: this.props.startDate,
 	        endDate: this.props.endDate,
 	        utcOffset: this.props.utcOffset }));
@@ -5425,10 +5435,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return weeks;
 	  },
 	  getClassNames: function getClassNames() {
-	    var _props = this.props;
-	    var selectingDate = _props.selectingDate;
-	    var selectsStart = _props.selectsStart;
-	    var selectsEnd = _props.selectsEnd;
+	    var _props = this.props,
+	        selectingDate = _props.selectingDate,
+	        selectsStart = _props.selectsStart,
+	        selectsEnd = _props.selectsEnd;
 
 	    return (0, _classnames2.default)('react-datepicker__month', {
 	      'react-datepicker__month--selecting-range': selectingDate && (selectsStart || selectsEnd)
@@ -5459,6 +5469,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _day2 = _interopRequireDefault(_day);
 
+	var _week_number = __webpack_require__(132);
+
+	var _week_number2 = _interopRequireDefault(_week_number);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Week = _react2.default.createClass({
@@ -5480,6 +5494,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    selectingDate: _react2.default.PropTypes.object,
 	    selectsEnd: _react2.default.PropTypes.bool,
 	    selectsStart: _react2.default.PropTypes.bool,
+	    showWeekNumber: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
 	    utcOffset: _react2.default.PropTypes.number
 	  },
@@ -5498,7 +5513,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var _this = this;
 
 	    var startOfWeek = this.props.day.clone().startOf('week');
-	    return [0, 1, 2, 3, 4, 5, 6].map(function (offset) {
+	    var days = [];
+	    if (this.props.showWeekNumber) {
+	      days.push(_react2.default.createElement(_week_number2.default, { key: 'W', weekNumber: parseInt(startOfWeek.format('w'), 10) }));
+	    }
+	    return days.concat([0, 1, 2, 3, 4, 5, 6].map(function (offset) {
 	      var day = startOfWeek.clone().add(offset, 'days');
 	      return _react2.default.createElement(_day2.default, {
 	        key: offset,
@@ -5519,7 +5538,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        startDate: _this.props.startDate,
 	        endDate: _this.props.endDate,
 	        utcOffset: _this.props.utcOffset });
-	    });
+	    }));
 	  },
 	  render: function render() {
 	    return _react2.default.createElement(
@@ -5598,9 +5617,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return (0, _date_utils.isDayDisabled)(this.props.day, this.props);
 	  },
 	  isHighlighted: function isHighlighted() {
-	    var _props = this.props;
-	    var day = _props.day;
-	    var highlightDates = _props.highlightDates;
+	    var _props = this.props,
+	        day = _props.day,
+	        highlightDates = _props.highlightDates;
 
 	    if (!highlightDates) return false;
 	    return highlightDates.some(function (testDay) {
@@ -5608,22 +5627,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  },
 	  isInRange: function isInRange() {
-	    var _props2 = this.props;
-	    var day = _props2.day;
-	    var startDate = _props2.startDate;
-	    var endDate = _props2.endDate;
+	    var _props2 = this.props,
+	        day = _props2.day,
+	        startDate = _props2.startDate,
+	        endDate = _props2.endDate;
 
 	    if (!startDate || !endDate) return false;
 	    return (0, _date_utils.isDayInRange)(day, startDate, endDate);
 	  },
 	  isInSelectingRange: function isInSelectingRange() {
-	    var _props3 = this.props;
-	    var day = _props3.day;
-	    var selectsStart = _props3.selectsStart;
-	    var selectsEnd = _props3.selectsEnd;
-	    var selectingDate = _props3.selectingDate;
-	    var startDate = _props3.startDate;
-	    var endDate = _props3.endDate;
+	    var _props3 = this.props,
+	        day = _props3.day,
+	        selectsStart = _props3.selectsStart,
+	        selectsEnd = _props3.selectsEnd,
+	        selectingDate = _props3.selectingDate,
+	        startDate = _props3.startDate,
+	        endDate = _props3.endDate;
 
 
 	    if (!(selectsStart || selectsEnd) || !selectingDate || this.isDisabled()) {
@@ -5645,11 +5664,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return false;
 	    }
 
-	    var _props4 = this.props;
-	    var day = _props4.day;
-	    var selectingDate = _props4.selectingDate;
-	    var startDate = _props4.startDate;
-	    var selectsStart = _props4.selectsStart;
+	    var _props4 = this.props,
+	        day = _props4.day,
+	        selectingDate = _props4.selectingDate,
+	        startDate = _props4.startDate,
+	        selectsStart = _props4.selectsStart;
 
 
 	    if (selectsStart) {
@@ -5663,11 +5682,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return false;
 	    }
 
-	    var _props5 = this.props;
-	    var day = _props5.day;
-	    var selectingDate = _props5.selectingDate;
-	    var endDate = _props5.endDate;
-	    var selectsEnd = _props5.selectsEnd;
+	    var _props5 = this.props,
+	        day = _props5.day,
+	        selectingDate = _props5.selectingDate,
+	        endDate = _props5.endDate,
+	        selectsEnd = _props5.selectsEnd;
 
 
 	    if (selectsEnd) {
@@ -5677,19 +5696,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  isRangeStart: function isRangeStart() {
-	    var _props6 = this.props;
-	    var day = _props6.day;
-	    var startDate = _props6.startDate;
-	    var endDate = _props6.endDate;
+	    var _props6 = this.props,
+	        day = _props6.day,
+	        startDate = _props6.startDate,
+	        endDate = _props6.endDate;
 
 	    if (!startDate || !endDate) return false;
 	    return (0, _date_utils.isSameDay)(startDate, day);
 	  },
 	  isRangeEnd: function isRangeEnd() {
-	    var _props7 = this.props;
-	    var day = _props7.day;
-	    var startDate = _props7.startDate;
-	    var endDate = _props7.endDate;
+	    var _props7 = this.props,
+	        day = _props7.day,
+	        startDate = _props7.startDate,
+	        endDate = _props7.endDate;
 
 	    if (!startDate || !endDate) return false;
 	    return (0, _date_utils.isSameDay)(endDate, day);
@@ -5737,8 +5756,40 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseDelay = __webpack_require__(133),
-	    baseRest = __webpack_require__(134);
+	'use strict';
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var WeekNumber = _react2.default.createClass({
+	  displayName: 'WeekNumber',
+
+	  propTypes: {
+	    weekNumber: _react2.default.PropTypes.number.isRequired
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      {
+	        className: 'react-datepicker__week-number',
+	        'aria-label': 'week-' + this.props.weekNumber },
+	      this.props.weekNumber
+	    );
+	  }
+	});
+
+	module.exports = WeekNumber;
+
+/***/ },
+/* 133 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var baseDelay = __webpack_require__(134),
+	    baseRest = __webpack_require__(135);
 
 	/**
 	 * Defers invoking the `func` until the current call stack has cleared. Any
@@ -5766,7 +5817,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 133 */
+/* 134 */
 /***/ function(module, exports) {
 
 	/** Error message constants. */
@@ -5793,12 +5844,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 134 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var identity = __webpack_require__(111),
-	    overRest = __webpack_require__(135),
-	    setToString = __webpack_require__(137);
+	    overRest = __webpack_require__(136),
+	    setToString = __webpack_require__(138);
 
 	/**
 	 * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -5816,10 +5867,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 135 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var apply = __webpack_require__(136);
+	var apply = __webpack_require__(137);
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeMax = Math.max;
@@ -5858,7 +5909,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 136 */
+/* 137 */
 /***/ function(module, exports) {
 
 	/**
@@ -5885,11 +5936,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 137 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseSetToString = __webpack_require__(138),
-	    shortOut = __webpack_require__(141);
+	var baseSetToString = __webpack_require__(139),
+	    shortOut = __webpack_require__(142);
 
 	/**
 	 * Sets the `toString` method of `func` to return `string`.
@@ -5905,11 +5956,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 138 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var constant = __webpack_require__(139),
-	    defineProperty = __webpack_require__(140),
+	var constant = __webpack_require__(140),
+	    defineProperty = __webpack_require__(141),
 	    identity = __webpack_require__(111);
 
 	/**
@@ -5933,7 +5984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 139 */
+/* 140 */
 /***/ function(module, exports) {
 
 	/**
@@ -5965,7 +6016,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 140 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var getNative = __webpack_require__(26);
@@ -5982,7 +6033,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 141 */
+/* 142 */
 /***/ function(module, exports) {
 
 	/** Used to detect hot functions by number of calls within a span of milliseconds. */
@@ -6025,7 +6076,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 142 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6036,11 +6087,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(143);
+	var _reactDom = __webpack_require__(144);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _tether = __webpack_require__(144);
+	var _tether = __webpack_require__(145);
 
 	var _tether2 = _interopRequireDefault(_tether);
 
@@ -6124,10 +6175,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _update: function _update() {
 	    var _this = this;
 
-	    var _props = this.props;
-	    var children = _props.children;
-	    var renderElementTag = _props.renderElementTag;
-	    var renderElementTo = _props.renderElementTo;
+	    var _props = this.props,
+	        children = _props.children,
+	        renderElementTag = _props.renderElementTag,
+	        renderElementTo = _props.renderElementTo;
 
 	    var elementComponent = children[1];
 
@@ -6157,11 +6208,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  },
 	  _updateTether: function _updateTether() {
-	    var _props2 = this.props;
-	    var renderElementTag = _props2.renderElementTag;
-	    var renderElementTo = _props2.renderElementTo;
-
-	    var options = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo']); // eslint-disable-line no-unused-vars
+	    var _props2 = this.props,
+	        renderElementTag = _props2.renderElementTag,
+	        renderElementTo = _props2.renderElementTo,
+	        options = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo']); // eslint-disable-line no-unused-vars
 
 
 	    var tetherOptions = _extends({
@@ -6198,13 +6248,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = TetherComponent;
 
 /***/ },
-/* 143 */
+/* 144 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_143__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_144__;
 
 /***/ },
-/* 144 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.3.7 */
