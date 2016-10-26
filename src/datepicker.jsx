@@ -68,6 +68,7 @@ var DatePicker = React.createClass({
     renderElementBefore: React.PropTypes.node,
     renderElementAfter: React.PropTypes.node,
     customClassName: React.PropTypes.string,
+    disableArrowKeys: React.PropTypes.boolean,
     utcOffset: React.PropTypes.number
   },
 
@@ -162,16 +163,16 @@ var DatePicker = React.createClass({
       this.setOpen(false)
     } else if (event.key === 'Tab') {
       this.setOpen(false)
-    } else if (event.key === 'ArrowLeft') {
+    } else if (!this.props.disableArrowKeys && event.key === 'ArrowLeft') {
       event.preventDefault()
       this.setSelected(copy.subtract(1, 'days'))
-    } else if (event.key === 'ArrowRight') {
+    } else if (!this.props.disableArrowKeys && event.key === 'ArrowRight') {
       event.preventDefault()
       this.setSelected(copy.add(1, 'days'))
-    } else if (event.key === 'ArrowUp') {
+    } else if (!this.props.disableArrowKeys && event.key === 'ArrowUp') {
       event.preventDefault()
       this.setSelected(copy.subtract(1, 'weeks'))
-    } else if (event.key === 'ArrowDown') {
+    } else if (!this.props.disableArrowKeys && event.key === 'ArrowDown') {
       event.preventDefault()
       this.setSelected(copy.add(1, 'weeks'))
     } else if (event.key === 'PageUp') {
