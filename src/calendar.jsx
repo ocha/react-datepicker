@@ -103,6 +103,8 @@ export default class Calendar extends React.Component {
     setOpen: PropTypes.func,
     useShortMonthInDropdown: PropTypes.bool,
     showDisabledMonthNavigation: PropTypes.bool,
+    renderElementBefore: PropTypes.node,
+    renderElementAfter: PropTypes.node,
   };
 
   static get defaultProps() {
@@ -520,11 +522,13 @@ export default class Calendar extends React.Component {
     return (
       <div className={classnames("react-datepicker", this.props.className)}>
         <div className="react-datepicker__triangle" />
+        {this.props.renderElementBefore}
         {this.renderPreviousMonthButton()}
         {this.renderNextMonthButton()}
         {this.renderMonths()}
         {this.renderTodayButton()}
         {this.renderTimeSection()}
+        {this.props.renderElementAfter}
         {this.props.children}
       </div>
     );
