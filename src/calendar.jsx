@@ -104,7 +104,6 @@ export default class Calendar extends React.Component {
     useShortMonthInDropdown: PropTypes.bool,
     showDisabledMonthNavigation: PropTypes.bool,
     renderElementBefore: PropTypes.node,
-    renderElementAfter: PropTypes.node,
   };
 
   static get defaultProps() {
@@ -528,7 +527,6 @@ export default class Calendar extends React.Component {
         {this.renderMonths()}
         {this.renderTodayButton()}
         {this.renderTimeSection()}
-        {this.props.renderElementAfter}
         {this.props.children}
       </div>
     );
