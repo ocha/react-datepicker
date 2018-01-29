@@ -36764,8 +36764,8 @@
 	  maxTime: _propTypes2.default.object,
 	  excludeTimes: _propTypes2.default.array,
 	  useShortMonthInDropdown: _propTypes2.default.bool,
-	  renderElementBefore: _react2.default.PropTypes.node,
-	  renderElementAfter: _react2.default.PropTypes.node
+	  renderElementBefore: _propTypes2.default.node,
+	  renderElementAfter: _propTypes2.default.node
 	};
 	exports.default = DatePicker;
 

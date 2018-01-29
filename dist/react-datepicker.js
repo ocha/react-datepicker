@@ -7859,8 +7859,8 @@ var DatePicker = _wrapComponent("DatePicker")((_temp = _class = function (_React
   maxTime: PropTypes.object,
   excludeTimes: PropTypes.array,
   useShortMonthInDropdown: PropTypes.bool,
-  renderElementBefore: React.PropTypes.node,
-  renderElementAfter: React.PropTypes.node
+  renderElementBefore: PropTypes.node,
+  renderElementAfter: PropTypes.node
 }, _temp));
 
 return DatePicker;
